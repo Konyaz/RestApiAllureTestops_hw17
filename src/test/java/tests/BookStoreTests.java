@@ -157,11 +157,11 @@ public class BookStoreTests {
     @Test
     void booksJsonShemaTest() {
         given()
-                        .log().uri()
-                        .log().body()
-                        .get("https://demoqa.com/BookStore/v1/Books")
-                        .then()
-                        .log().body()
-                        .body(matchesJsonSchemaInClasspath("jsonshemas/booklist_response.json"));
+                .log().uri()
+                .log().body()
+                .get("https://demoqa.com/BookStore/v1/Books")
+                .then()
+                .log().body()
+                .body(matchesJsonSchemaInClasspath("jsonshemas/booklist_response.json"));
     }
 }
